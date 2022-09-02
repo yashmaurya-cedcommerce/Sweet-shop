@@ -1,38 +1,2907 @@
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeContainer
+{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+
+.scrollBtn
+{
+  position: fixed;
+  background-color: #af2121;
+  color: white;
+  bottom: 5%;
+  right: 3%;
+  font-size: 3vw;
+  padding: 1% 2%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.secondCartBtn
+{
+  display: none;
+  position: fixed;
+  margin: 0% 5%;
+  background-color: #af2121;
+  color: white;
+  bottom: 5%;
+  right: 10%;
+  font-size: 3vw;
+  padding: 1% 2%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.mainBanner
+{
+  /* padding: 3%; */
+  background-image: url('/public/BGone.png');
+  /* position: relative; */
+  width: 95%;
+}
+
+.drawerBar
+{
+  width: 5%;
+  background-color: rgb(100, 37, 21, 0.9);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  /* position: fixed; */
+  /* right: 0%; */
+  /* height: max-content; */
+}
+
+.drawerBarBtn
+{
+  margin: 0%;
+  padding: 1% 1.5%;
+  font-size: 2vw;
+  cursor: pointer;
+  position: fixed;
+  top: 0%;
+}
+
+.drawerCartBtn
+{
+  display: block;
+  margin: 0%;
+  padding: 1% 1.3%;
+  font-size: 2vw;
+  cursor: pointer;
+  position: fixed;
+  top: 7%;
+}
+
+
+
+
+
+.drawerContainer
+{
+  width: 100%;
+}
+
+.drawerHeader
+{
+  width: 100%;
+  background-color: #462530;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 3vw;
+  padding: 2% 2%;
+  text-align: center;
+}
+
+.drawerHeader p
+{
+  margin: 0%;
+}
+
+.checkboxDiv
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  background-color: #fcd9d5;
+}
+
+.sortingDiv
+{
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0b9d4;
+}
+
+#sortBy
+{
+  font-size: 2vw;
+  padding: 0% 2%;
+  margin: 0%;
+}
+
+#sortID
+{
+  font-size: 1.5vw;
+  height: 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTTOM DRAWER CSS  */
+
+
+.drawerCartDiv
+{
+  width: 100%;
+  margin: auto;
+}
+
+.drawerCartHeader
+{
+  width: 100%;
+  padding: 4% 3%;
+  background-color: #462530;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawerCartHeaderOne
+{
+  width: 60%;
+  text-align: start;
+}
+
+.drawerCartHeading
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  margin: 0%;
+}
+
+.drawerCartSubheading
+{
+  font-size: 1.2vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-weight: bold;
+  margin: 0%;
+  padding: 3% 0%;
+}
+
+.drawerCartHeaderTwo
+{
+  width: 40%;
+  text-align: end;
+  display: table;
+}
+
+.cartCheckoutBtnDiv
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.checkoutBtn
+{
+  font-size: 1.5vw;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 2% 0%;
+  width: 100%;
+  background-color: #f0b9d4;
+  color: #462530;
+  transition: transform .3s;
+}
+
+.checkoutBtn:hover
+{
+  transform: scale(1.05); 
+}
+
+
+
+.drawerCartMain
+{
+  width: 100%;
+  text-align: center;
+}
+
+.drawerCartMain .emptyCartImage
+{
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.drawerCartMain .emptyCartMsg
+{
+  font-size: 2vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-weight: bold;
+  color: #462530;
+}
+
+.cartTable
+{
+  width: 100%;
+}
+
+.cartTable th
+{
+  font-size: 1.8vw;
+  font-family: 'Pacifico', cursive;
+  color: #5c3241;
+  background-color: #f0b9d4;
+  padding: 2% 1%;
+}
+
+.cartImage
+{
+  width: 10%;
+}
+
+.cartImage img
+{
+  width: 100%;
+  height: 7vw;
+}
+
+.cartDescription
+{
+  width: 40%;
+}
+
+.cartName
+{
+  font-size: 1.6vw;
+  font-weight: bold;
+  margin: 0%;
+  text-align: start;
+}
+
+.cartCategory
+{
+  font-size: 1vw;
+  opacity: 80%;
+  font-weight: bold;
+  margin: 0%;
+  text-align: start;
+}
+
+.cartPrice
+{
+  width: 10%;
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.cartTotal
+{
+  width: 10%;
+  font-size: 1.6vw;
+  font-weight: bold; 
+}
+
+.cartDelete
+{
+  width: 10%;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.deleteIcon
+{
+  transition: transform .2s;
+}
+
+.cartDelete:hover .deleteIcon
+{
+  transform: scale(1.5);
+  color: #af2121;
+}
+
+.cartQuant
+{
+  width: 20%;
+  /* margin: 0% 5%; */
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.quantFlex
+{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantFlex p
+{
+  margin: 0%;
+}
+
+.quantBtn
+{
+  width: 25%;
+  border-radius: 4px;
+  padding: 2%;
+  cursor: pointer;
+  font-size: 2vw;
+}
+
+.quantNum
+{
+  font-size: 2vw;
+}
+
+
+.minusBtn
+{
+  background-color: #af2121;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.plusBtn
+{
+  background-color: #104417;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.totalTr
+{
+  background-color: #5c3241;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 3vw;
+}
+
+.emptyCartTd
+{
+  text-align: start;
+}
+
+.emptyCartBtn
+{
+  margin: 5% 0%;
+  padding: 3% 2%;
+  background-color: #af2121;
+  color: white;
+  font-size: 2vw;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
+.popDiv
+{
+  width: 80%;
+  margin: auto;
+  padding: 5% 2%;
+}
+
+.popMsg
+{
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+
+.popBtnDiv
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.popBtnDiv button
+{
+  border: none;
+  width: 40%;
+  border-radius: 8px;
+  padding: 1% 0%;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.popYes
+{
+  background-color: #af2121;
+  color: white;
+}
+
+.popNo
+{
+  background-color: #104417;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cloudDiv
+{
+  /* position: absolute; */
+  width: 100%;
+  
+  /* top: 0%; */
+  margin: auto;
+  margin-bottom: -20%;
+  height: 25vw;
+  position: relative;
+  display: flex;
+  
+}
+
+.cloudHalfOne
+{
+  width: 55%;
+  margin-top: -8%;
+}
+
+.cloudHalfOne img
+{
+  width: 60%
+}
+
+.tagline
+{
+  position: absolute;
+  top: 2%;
+  left: 15%;
+  margin: 0%;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  font-size: 2.5vw;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+}
+
+.cloudHalfTwo
+{
+  width: 45%;
+}
+
+.cloudHalfTwo img
+{
+  width: 80%;
+}
+
+.viewOffersBtn
+{
+  position: absolute;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  top: 13%;
+  left: 30%;
+  font-size: 2.5vw;
+  background-color: #462530;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 2% 5%;
+  font-family: 'Satisfy', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+/* NAVBAR CSS  */
+
+.navbarContainer
+{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.logoDiv
+{
+  width: 16%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoImage
+{
+  width: 50%;
+  height: 7vw;
+}
+
+.logoTitle
+{
+  text-align: start;
+  font-size: 2.5vw;
+  margin: 0%;
+  font-family: 'Pacifico', cursive;
+  /* font-family: 'Pacifico', cursive; */
+  /* color: #462530; */
+  color: #462530;
+  opacity: 90%;
+}
+
+
+.mainNavbar
+{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Satisfy', cursive;
+  font-size: 2vw;
+  margin: 0%;
+  padding: 2% 0%;
+  color: #462530;
+}
+
+.mainNavbar  p
+{
+  padding: 0% 2%;
+  margin: 0%;
+  width: 20%;
+}
+
+
+
+
+
+.searchDiv
+{
+  display: flex;
+  align-items: center;
+  padding: 0% 2%;
+  width: 70%;
+}
+
+.searchDiv input
+{
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  height: 3vw;
+  width: 90%;
+  padding: 0% 3%;
+}
+
+.searchDiv button
+{
+  padding: 1% 0% 0% 0%;
+  border: none;
+  height: 3vw;
+  font-size: 1.6vw;
+  background-color: white;
+  border-radius: 0px 4px 4px 0px;
+  width: 10%;
+  cursor: auto;
+}
+
+
+.suggestionsDiv
+{
+  display: none;
+  margin-top: -2.3%;
+  width: 31.5%;
+  background-color: white;
+  /* text-align: start; */
+  position: absolute;
+  padding: 1% 1%;
+  right: 5.9%;
+  z-index: 9;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.suggestionsDiv a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.suggestionDiv
+{
+  padding: 1% 1%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestionDiv:hover
+{
+  background-color: #f0b9d4;
+}
+
+.suggestionsDivOne
+{
+  width: 50%;
+  text-align: start;
+}
+
+.suggestionsDivTwo
+{
+  width: 50%;
+  text-align: end;
+}
+
+.suggestionsDivTwo img
+{
+  width: 30%;
+}
+
+.suggestionName
+{
+  font-size: 1.5vw;
+  margin: 0%;
+}
+
+.suggestionPrice
+{
+  font-size: 1.2vw;
+  opacity: 80%;
+  margin: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carouselContainer
+{
+  
+  width: 70%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 0%;
+  /* margin-bottom: 5%; */
+  border-radius: 12px;
+}
+
+.carouselImage
+{
+  width: 100%;
+  height: 30vw;
+  border-radius: 12px;
+}
+
+.carousel-item
+{
+  position: relative;
+}
+
+
+.slideTextDiv
+{
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  font-size: 3vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+  background-color: rgb(241, 186, 213, 0.5);
+  border-radius: 6px;
+  padding: 2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.slideTextDiv p
+{
+  margin: 3% 0%;
+  color: #462530;
+}
+
+.slideButton
+{
+  background-color: rgb(100, 37, 21, 0.9);
+  color: white;
+  border: none;
+  font-family: 'Satisfy', cursive;
+  font-size: 3vw;
+  width: 100%;
+  padding: 2% 0%;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.slideButton:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 150px;
+  right: 30px;  
+  transition: 0.5s;
+}
+
+.slideButton:hover{
+  padding-right: 50px;
+  padding-left:8px;
+}
+
+.slideButton:hover:after {
+  opacity: 1;
+  right: 100px;
+}
+
+.carouselLink
+{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OFFER CSS  */
+
+.offersContainer
+{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.offerCards
+{
+  width: 30%;
+  margin: auto;
+  background-color: rgb(237, 122, 126, 0.5);
+  padding: 3% 2%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.offerHeader
+{
+  font-size: 2.5vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.offerBody
+{
+  font-size: 1.8vw;
+  font-family: 'Satisfy', cursive;
+  color: #5c3241;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CATEGORY DIV CSS */
+
+.categoryCardsDiv
+{
+  width: 100%;
+}
+
+.categoriesDivHeader
+{
+  width: 100%;
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.categoryMainHeading
+{
+  
+  font-size: 4vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.categorySubHeading
+{
+  font-size: 2vw;
+  font-family: 'Satisfy', cursive;
+  color: #462530;
+}
+
+
+.allCategoriesDiv
+{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categoryDiv 
+{
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  
+}
+
+.categoryImage
+{
+  width: 80%;
+  margin: auto;
+  height: 20vw;
+  transition: transform .3s;
+}
+
+.categoryImage:hover
+{
+  transform: scale(1.07);
+  opacity: 85%;
+}
+
+.categoryTitle
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.categoryLink
+{
+  text-decoration: none;
+  color: #462530;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALL PRODUCTS CSS  */
+
+.renderProductsDiv
+{
+  width: 90%;
+  margin: auto;
+}
+
+.renderHeader
+{
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.renderMainHeading
+{
+  font-size: 4vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.renderSubheading
+{
+  font-size: 2vw;
+  font-family: 'Satisfy', cursive;
+  color: #462530;
+}
+
+.eachCategoryDiv
+{
+  width: 90%;
+  margin: auto;
+}
+
+.categoryHeader
+{
+  width: 100%;
+  text-align: start;
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.eachCategoryProducts
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eachProductDiv
+{
+  width: 20%;
+  margin: 5% 2.5%;
+}
+
+.eachProductDiv img
+{
+  width: 100%;
+  height: 15vw;
+}
+
+.productName
+{
+  font-size: 2vw;
+  height: 7vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-family: 'Pacifico', cursive;
+  margin: 10% 0%;
+}
+
+.ingredientsHeading
+{
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  margin: 0%;
+}
+
+.priceDiv
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0%;
+}
+
+.productPrice
+{
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  
+}
+
+.productMRP
+{
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  opacity: 75%
+}
+
+.ingredientsDiv
+{
+  display: flex;
+  margin: 5% 0%;
+  justify-content: space-around;
+}
+
+.ingredientsDiv p
+{
+  margin: 0% 2%;
+  font-size: 1.2vw;
+  background-color: #462530;
+  color: white;
+  padding: 0% 2%;
+  border-radius: 4px;
+}
+
+.addToCartDiv
+{
+  width: 100%;
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.addToCartDiv button
+{
+  background-color: #462530;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 2vw;
+  border: none;
+  padding: 5% 0%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 6px;
+  transition: transform .3s;
+}
+
+.cartBtn:hover
+{
+  transform: scale(1.1); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CHECKOUT PAGE CSS  */
+
+
+.checkoutPageContainer
+{
+  background-image: url('/public/BGone.png');
+  position: relative;
+}
+
+.checkoutMainContainer
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutFormDiv
+{
+  width: 50%;
+  position: relative;
+}
+
+.mainFormDiv
+{
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: white;
+  padding: 3% 3%;
+  border-radius: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  position: sticky;
+  top: 15%;
+}
+
+.formHeader
+{
+  width: 80%;
+  margin: auto;
+  margin-top: -12%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2% 2%;
+}
+
+.formHeading
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  
+}
+
+.doubleInput
+{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.finalBtnDiv
+{
+  width: 100%;
+  padding: 5% 0%;
+}
+
+.finalBtn
+{
+  width: 96%;
+  margin: auto;
+  border: none;
+  background-color: #462530;
+  color: white;
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  border-radius: 6px;
+  padding: 2% 0%;
+  transition: transform .4s;
+}
+
+.finalBtn:hover
+{
+  transform: scale(1.05);
+  opacity: 95%;
+}
+
+.checkoutCartDiv
+{
+  width: 50%;
+}
+
+.mainCheckoutCart
+{
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.checkoutCartHeader
+{
+  width: 100%;
+  
+}
+
+.checkoutCartHeading
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  background-color: #462530;
+  color: white;
+  margin: 0%;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.checkoutCartBody
+{
+  width: 100%;
+}
+
+.checkoutCartProduct
+{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 15vw;
+  border-radius: 8px;
+}
+
+.checkoutProductImageDiv
+{
+  width: 30%;
+}
+
+.checkoutProductImageDiv img
+{
+  width: 100%;
+}
+
+.checkoutProductDetailsDiv
+{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetailsDivOne
+{
+  width: 60%;
+  text-align: start;
+  padding: 2% 5%;
+}
+
+.checkoutProductName
+{
+  font-size: 1.6vw;
+  margin: 0% 0% 10% 0%;
+}
+
+.checkoutProductCategory
+{
+  font-size: 1.5vw;
+  margin: 0%;
+}
+
+.checkoutProductQuant
+{
+  font-size: 1.3vw;
+  margin: 0%;
+}
+
+.productDetailsDivTwo
+{
+  width: 40%;
+  text-align: end;
+  padding: 2% 5%;
+}
+
+.checkoutProductPrice
+{
+  font-size: 1.4vw;
+}
+
+.checkoutProductTotal
+{
+  font-size: 1.4vw;
+}
+
+
+
+.confirmModalDiv
+{
+  display: none;
+  position: fixed;
+  width: 50%;
+  padding: 1% 1%;
+  top: 20%;
+  left: 30%;
+  
+  background-color: #f0b9d4;
+  color: #462530;
+  border-radius: 6px;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@keyframes openAnimation{
+  0%{
+      opacity: 0;
+      /* width: 90%; */
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+      opacity: 1;
+      /* width: 100%; */
   }
 }
+
+.closeModalDiv
+{
+  text-align: end;
+  margin: 0%;
+}
+
+.closeModalBtn
+{
+  border: none;
+  background-color: #af2121;
+  color: white;
+  border-radius: 4px;
+}
+
+.confirmModalGreet
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalMsg
+{
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalFooter
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmModalAddressDiv
+{
+  width: 50%;
+  text-align: start;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalAddress
+{
+  font-size: 2vw;
+}
+
+.confirmModalFooterImage
+{
+  width: 50%;
+  /* text-align: end; */
+  padding: 5% 5%;
+}
+
+.confirmModalFooterImage img
+{
+  width: 100%;
+}
+
+
+.checkoutLink
+{
+  text-decoration: none;
+}
+
+.logoDivTwo
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+/* body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #ff80ab 50%, #876356 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px)
+{
+
+  /* NAVBAR CSS  */
+
+.navbarContainer
+{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.logoDiv
+{
+  width: 26%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoImage
+{
+  width: 30%;
+  height: 10vw;
+}
+
+.logoTitle
+{
+  text-align: start;
+  font-size: 3.3vw;
+  margin: 0%;
+  font-family: 'Pacifico', cursive;
+  /* font-family: 'Pacifico', cursive; */
+  /* color: #462530; */
+  color: #462530;
+  opacity: 90%;
+}
+
+
+.mainNavbar
+{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Satisfy', cursive;
+  font-size: 3.3vw;
+  margin: 0%;
+  padding: 2% 0%;
+  color: #462530;
+}
+
+.mainNavbar  p
+{
+  padding: 0% 2%;
+  margin: 0%;
+  width: 30%;
+}
+
+
+
+
+
+.searchDiv
+{
+  display: flex;
+  align-items: center;
+  padding: 0% 2%;
+  width: 70%;
+}
+
+.searchDiv input
+{
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  height: 6vw;
+  width: 90%;
+  padding: 0% 3%;
+  font-size: 3vw;
+}
+
+.searchDiv button
+{
+  padding: 1% 2% 0% 0%;
+  border: none;
+  height: 6vw;
+  font-size: 2.5vw;
+  background-color: white;
+  border-radius: 0px 4px 4px 0px;
+  width: 10%;
+  cursor: auto;
+}
+
+
+.suggestionsDiv
+{
+  display: none;
+  margin-top: -2.3%;
+  width: 31.5%;
+  background-color: white;
+  /* text-align: start; */
+  position: absolute;
+  padding: 1% 1%;
+  right: 5.9%;
+  z-index: 9;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.suggestionsDiv a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.suggestionDiv
+{
+  padding: 1% 1%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestionDiv:hover
+{
+  background-color: #f0b9d4;
+}
+
+.suggestionsDivOne
+{
+  width: 70%;
+  text-align: start;
+}
+
+.suggestionsDivTwo
+{
+  width: 30%;
+  text-align: end;
+}
+
+.suggestionsDivTwo img
+{
+  width: 60%;
+}
+
+.suggestionName
+{
+  font-size: 2.2vw;
+  margin: 0%;
+}
+
+.suggestionPrice
+{
+  font-size: 1.8vw;
+  opacity: 80%;
+  margin: 0%;
+}
+
+
+.logoDivTwo
+{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cloudDiv
+{
+  /* position: absolute; */
+  width: 100%;
+  
+  /* top: 0%; */
+  margin: auto;
+  margin-bottom: -17%;
+  height: 25vw;
+  position: relative;
+  display: flex;
+  
+}
+
+.cloudHalfOne
+{
+  width: 60%;
+  margin-top: -9%;
+}
+
+.cloudHalfOne img
+{
+  width: 80%
+}
+
+.tagline
+{
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  margin: 0%;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  font-size: 5vw;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+}
+
+.cloudHalfTwo
+{
+  width: 40%;
+}
+
+.cloudHalfTwo img
+{
+  width: 80%;
+}
+
+.viewOffersBtn
+{
+  position: absolute;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  top: 13%;
+  left: 30%;
+  font-size: 2.5vw;
+  background-color: #462530;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 2% 5%;
+  font-family: 'Satisfy', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carouselContainer
+{
+  
+  width: 80%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 0%;
+  /* margin-bottom: 5%; */
+  border-radius: 12px;
+}
+
+.carouselImage
+{
+  width: 100%;
+  height: 40vw;
+  border-radius: 12px;
+}
+
+.carousel-item
+{
+  position: relative;
+}
+
+
+.slideTextDiv
+{
+  position: absolute;
+  top:18%;
+  left: 16%;
+  font-size: 4vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 2px rgba(70, 37, 48, 1);
+  background-color: rgb(241, 186, 213, 0.5);
+  border-radius: 6px;
+  padding: 2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.slideTextDiv p
+{
+  margin: 3% 0%;
+  color: #462530;
+}
+
+.slideButton
+{
+  background-color: rgb(100, 37, 21, 0.9);
+  color: white;
+  border: none;
+  font-family: 'Satisfy', cursive;
+  font-size: 4vw;
+  width: 100%;
+  padding: 2% 0%;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OFFER CSS  */
+
+.offersContainer
+{
+  width: 90%;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.offerCards
+{
+  width: 85%;
+  margin: 5% 7.5%;
+  background-color: rgb(237, 122, 126, 0.5);
+  padding: 3% 2%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.offerHeader
+{
+  font-size: 4.5vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.offerBody
+{
+  font-size: 4vw;
+  font-family: 'Satisfy', cursive;
+  color: #5c3241;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CATEGORY DIV CSS */
+
+.categoryCardsDiv
+{
+  width: 100%;
+}
+
+.categoriesDivHeader
+{
+  width: 100%;
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.categoryMainHeading
+{
+  
+  font-size: 6vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.categorySubHeading
+{
+  font-size: 3vw;
+  font-family: 'Satisfy', cursive;
+  color: #462530;
+}
+
+
+.allCategoriesDiv
+{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categoryDiv 
+{
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  
+}
+
+.categoryImage
+{
+  width: 90%;
+  margin: auto;
+  height: 23vw;
+  transition: transform .3s;
+}
+
+.categoryImage:hover
+{
+  transform: scale(1.07);
+  opacity: 85%;
+}
+
+.categoryTitle
+{
+  font-size: 5vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.categoryLink
+{
+  text-decoration: none;
+  color: #462530;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALL PRODUCTS CSS  */
+
+.renderProductsDiv
+{
+  width: 90%;
+  margin: auto;
+}
+
+.renderHeader
+{
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.renderMainHeading
+{
+  font-size: 6vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.renderSubheading
+{
+  font-size: 3.5vw;
+  font-family: 'Satisfy', cursive;
+  color: #462530;
+}
+
+.eachCategoryDiv
+{
+  width: 90%;
+  margin: auto;
+}
+
+.categoryHeader
+{
+  width: 100%;
+  text-align: start;
+  font-size: 5vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+}
+
+.eachCategoryProducts
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eachProductDiv
+{
+  width: 45%;
+  margin: 5% 2.5%;
+}
+
+.eachProductDiv img
+{
+  width: 100%;
+  height: 35vw;
+}
+
+.productName
+{
+  font-size: 4vw;
+  color: #462530;
+  height: 7vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-family: 'Pacifico', cursive;
+  margin: 10% 0%;
+}
+
+.ingredientsHeading
+{
+  font-size: 2vw;
+  font-family: 'Pacifico', cursive;
+  margin: 0%;
+}
+
+.priceDiv
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0%;
+}
+
+.productPrice
+{
+  font-size: 4vw;
+  color: #462530;
+  font-family: 'Pacifico', cursive;
+  
+}
+
+.productMRP
+{
+  font-size: 4vw;
+  font-family: 'Pacifico', cursive;
+  opacity: 75%
+}
+
+.ingredientsDiv
+{
+  display: flex;
+  margin: 5% 0%;
+  justify-content: space-around;
+}
+
+.ingredientsDiv p
+{
+  margin: 0% 2%;
+  font-size: 1.2vw;
+  background-color: #462530;
+  color: white;
+  padding: 0% 2%;
+  border-radius: 4px;
+}
+
+.addToCartDiv
+{
+  width: 100%;
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.addToCartDiv button
+{
+  background-color: #462530;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 4vw;
+  border: none;
+  padding: 5% 0%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 6px;
+  transition: transform .3s;
+}
+
+.cartBtn:hover
+{
+  transform: scale(1.1); 
+}
+
+
+
+
+
+
+
+
+.scrollBtn
+{
+  position: fixed;
+  background-color: #af2121;
+  color: white;
+  bottom: 5%;
+  right: 3%;
+  font-size: 6vw;
+  padding: 1% 3%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.drawerContainer
+{
+  width: 100%;
+}
+
+.drawerHeader
+{
+  width: 100%;
+  background-color: #462530;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 5vw;
+  padding: 2% 2%;
+  text-align: center;
+}
+
+.drawerHeader p
+{
+  margin: 0%;
+}
+
+.checkboxDiv
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 5%;
+  font-size: 4vw;
+  font-family: 'Pacifico', cursive;
+  background-color: #fcd9d5;
+}
+
+.sortingDiv
+{
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0b9d4;
+}
+
+#sortBy
+{
+  font-size: 4vw;
+  padding: 0% 2%;
+  margin: 0%;
+}
+
+#sortID
+{
+  font-size: 3vw;
+  height: 6vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkoutMainContainer
+{
+  width: 100%;
+  display: block;
+  justify-content: space-between;
+}
+
+.checkoutFormDiv
+{
+  width: 100%;
+  position: relative;
+}
+
+.finalBtnDiv
+{
+  width: 100%;
+  padding: 5% 0%;
+}
+
+.finalBtn
+{
+  width: 96%;
+  margin: auto;
+  border: none;
+  background-color: #462530;
+  color: white;
+  font-size: 5vw;
+  font-family: 'Pacifico', cursive;
+  border-radius: 6px;
+  padding: 2% 0%;
+  transition: transform .4s;
+}
+
+.formHeader
+{
+  width: 80%;
+  margin: auto;
+  margin-top: -12%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2% 2%;
+}
+
+.formHeading
+{
+  font-size: 6vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  
+}
+
+
+
+
+
+.checkoutCartDiv
+{
+  width: 90%;
+  margin: auto;
+}
+
+.mainCheckoutCart
+{
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.checkoutCartHeader
+{
+  width: 100%;
+  
+}
+
+.checkoutCartHeading
+{
+  font-size: 6vw;
+  font-family: 'Pacifico', cursive;
+  color: #462530;
+  background-color: #462530;
+  color: white;
+  margin: 0%;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.checkoutCartBody
+{
+  width: 100%;
+}
+
+.checkoutCartProduct
+{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 25vw;
+  border-radius: 8px;
+}
+
+.checkoutProductImageDiv
+{
+  width: 30%;
+}
+
+.checkoutProductImageDiv img
+{
+  width: 100%;
+}
+
+.checkoutProductDetailsDiv
+{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetailsDivOne
+{
+  width: 60%;
+  text-align: start;
+  padding: 2% 5%;
+}
+
+.checkoutProductName
+{
+  font-size: 3vw;
+  margin: 0% 0% 10% 0%;
+}
+
+.checkoutProductCategory
+{
+  font-size: 2.5vw;
+  margin: 0%;
+}
+
+.checkoutProductQuant
+{
+  font-size: 2.5vw;
+  margin: 0%;
+}
+
+.productDetailsDivTwo
+{
+  width: 40%;
+  text-align: end;
+  padding: 2% 5%;
+}
+
+.checkoutProductPrice
+{
+  font-size: 2.6vw;
+}
+
+.checkoutProductTotal
+{
+  font-size: 2.6vw;
+}
+
+
+
+
+
+
+.secondCartBtn
+  {
+    display: block;
+    position: fixed;
+  background-color: #af2121;
+  color: white;
+  bottom: 5%;
+  right: 3%;
+  font-size: 7vw;
+  padding: 1% 3%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* BOTTOM DRAWER CSS  */
+
+
+.drawerCartDiv
+{
+  width: 100%;
+  margin: auto;
+}
+
+.drawerCartHeader
+{
+  width: 100%;
+  padding: 4% 3%;
+  background-color: #462530;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawerCartHeaderOne
+{
+  width: 60%;
+  text-align: start;
+}
+
+.drawerCartHeading
+{
+  font-size: 5vw;
+  font-family: 'Pacifico', cursive;
+  margin: 0%;
+}
+
+.drawerCartSubheading
+{
+  font-size: 2vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-weight: bold;
+  margin: 0%;
+  padding: 3% 0%;
+}
+
+.drawerCartHeaderTwo
+{
+  width: 40%;
+  text-align: end;
+  display: table;
+}
+
+.cartCheckoutBtnDiv
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.checkoutBtn
+{
+  font-size: 2.9vw;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 2% 0%;
+  width: 100%;
+  background-color: #f0b9d4;
+  color: #462530;
+  transition: transform .3s;
+}
+
+.checkoutBtn:hover
+{
+  transform: scale(1.05); 
+}
+
+
+
+.drawerCartMain
+{
+  width: 100%;
+  text-align: center;
+}
+
+.drawerCartMain .emptyCartImage
+{
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.drawerCartMain .emptyCartMsg
+{
+  font-size: 2vw;
+  /* font-family: 'Satisfy', cursive; */
+  font-weight: bold;
+  color: #462530;
+}
+
+.cartTable
+{
+  width: 100%;
+}
+
+.cartTable th
+{
+  font-size: 3vw;
+  font-family: 'Pacifico', cursive;
+  color: #5c3241;
+  background-color: #f0b9d4;
+  padding: 2% 1%;
+}
+
+.cartImage
+{
+  width: 10%;
+}
+
+.cartImage img
+{
+  width: 100%;
+  height: 10vw;
+}
+
+.cartDescription
+{
+  width: 40%;
+}
+
+.cartName
+{
+  font-size: 3.5vw;
+  font-weight: bold;
+  margin: 0%;
+  text-align: start;
+}
+
+.cartCategory
+{
+  font-size: 3vw;
+  opacity: 80%;
+  font-weight: bold;
+  margin: 0%;
+  text-align: start;
+}
+
+.cartPrice
+{
+  width: 10%;
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+
+.cartTotal
+{
+  width: 10%;
+  font-size: 2.7vw;
+  font-weight: bold; 
+}
+
+.cartDelete
+{
+  width: 10%;
+  cursor: pointer;
+  font-size: 3.5vw;
+}
+
+.deleteIcon
+{
+  transition: transform .2s;
+}
+
+.cartDelete:hover .deleteIcon
+{
+  transform: scale(1.5);
+  color: #af2121;
+}
+
+.cartQuant
+{
+  width: 20%;
+  /* margin: 0% 5%; */
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.quantFlex
+{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quantFlex p
+{
+  margin: 0%;
+}
+
+.quantBtn
+{
+  width: 25%;
+  border-radius: 4px;
+  padding: 2%;
+  cursor: pointer;
+  font-size: 2.7vw;
+}
+
+.quantNum
+{
+  font-size: 2.7vw;
+}
+
+.minusBtn
+{
+  background-color: #af2121;
+  color: white;
+}
+
+.plusBtn
+{
+  background-color: #104417;
+  color: white;
+}
+
+.totalTr
+{
+  background-color: #5c3241;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 4vw;
+}
+
+.emptyCartTd
+{
+  text-align: start;
+}
+
+.emptyCartBtn
+{
+  margin: 5% 0%;
+  padding: 3% 2%;
+  background-color: #af2121;
+  color: white;
+  font-size: 3.5vw;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
+.popDiv
+{
+  width: 80%;
+  margin: auto;
+  padding: 5% 2%;
+}
+
+.popMsg
+{
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.popBtnDiv
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.popBtnDiv button
+{
+  border: none;
+  width: 40%;
+  border-radius: 8px;
+  padding: 1% 0%;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.popYes
+{
+  background-color: #af2121;
+  color: white;
+}
+
+.popNo
+{
+  background-color: #104417;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.confirmModalDiv
+{
+  display: none;
+  position: fixed;
+  width: 82%;
+  padding: 1% 1%;
+  top: 20%;
+  left: 9%;
+  
+  background-color: #f0b9d4;
+  color: #462530;
+  border-radius: 6px;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@keyframes openAnimation{
+  0%{
+      opacity: 0;
+      /* width: 90%; */
+  }
+  100%{
+      opacity: 1;
+      /* width: 100%; */
+  }
+}
+
+.closeModalDiv
+{
+  text-align: end;
+  margin: 0%;
+}
+
+.closeModalBtn
+{
+  border: none;
+  background-color: #af2121;
+  color: white;
+  border-radius: 4px;
+}
+
+.confirmModalGreet
+{
+  font-size: 5vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalMsg
+{
+  font-size: 4vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalFooter
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmModalAddressDiv
+{
+  width: 50%;
+  text-align: start;
+  font-family: 'Pacifico', cursive;
+}
+
+.confirmModalAddress
+{
+  font-size: 4vw;
+}
+
+.confirmModalFooterImage
+{
+  width: 50%;
+  /* text-align: end; */
+  padding: 5% 5%;
+}
+
+.confirmModalFooterImage img
+{
+  width: 100%;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 876px)
+{
+  .secondCartBtn
+  {
+    display: block;
+    position: fixed;
+    margin: 0% 5%;
+    background-color: #af2121;
+    color: white;
+    bottom: 5%;
+    right: 5%;
+    font-size: 4vw;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .drawerCartBtn
+{
+  display: none;
+  margin: 0%;
+  padding: 1% 1.3%;
+  font-size: 2vw;
+  cursor: pointer;
+  position: fixed;
+  top: 7%;
+}
+}
+
+
+
+
+
+
+
+
